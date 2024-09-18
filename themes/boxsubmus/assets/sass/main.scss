@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Sen:wght@400;700&display=swap");
+
+$color-background: #222;
+$color-separator: #3f3f3f;
+$color-primary: #bea693;
+
+$content-padding: 24px;
+
+html, body {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: $color-background;
+  color: white;
+  margin: 0px;
+
+  /*
+  &:after {
+    background-image: url(/images/overlay_texture.png);
+    content: " ";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 500;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  */
+}
+
+header {
+  padding: 16px;
+  border-bottom: 1px solid $color-separator;
+}
+
+footer {
+  border-top: 1px solid $color-separator;
+
+  clear: both;
+  padding-left: $content-padding;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.meta {
+  border-bottom: 1px solid $color-separator;
+}
+
+.meta-content {
+  padding-left: $content-padding;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+a {
+  color: $color-primary;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+nav {
+  float: left;
+
+  h2 {
+    font-weight: 600;
+  }
+  li {
+    list-style-type: none;
+    line-height: 24px;
+  }
+}
+
+.navbar {
+  position: fixed;
+}
+
+.navbar-logo {
+  border-bottom: 1px solid $color-separator;
+}
+
+.margin-16px {
+  margin: 16px;
+}
+
+.main-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  border-left: 1px solid $color-separator;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+
+main .content {
+  padding: $content-padding;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.main-content-width {
+  max-width: 768px;
+}
+
+img {
+  max-width: 700px;
+  border-radius: 0.5vh;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  color: $color-separator;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="navbar-logo">
+        <div class="margin-16px">
+          <a href="/">
+            <img src="/images/logo.png" style="width: 200px; margin: auto;"><br>
+            <img src="/images/wordmark.png" style="width: 200px; margin: auto; color: #9b8778; border-radius: 0px;">
+          </a>
+
+        </div>
+      </div>
+
+      <div class="margin-16px">
+        <br>
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        <h2>games</h2>
+        {{ partial "menu.html" (dict "menuID" "games" "page" .) }}
+        <h2>tools</h2>
+        {{ partial "menu.html" (dict "menuID" "tools" "page" .) }}
+      </div>
+    </nav>
+    <div class="main-area">
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+      <footer>
+        {{ partial "footer.html" . }}
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

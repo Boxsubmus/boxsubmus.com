@@ -1,0 +1,35 @@
+baseURL = 'https://boxsubmus.com/'
+languageCode = 'en-us'
+title = 'Boxsubmus'
+theme = 'boxsubmus'
+canonifyURLs = true
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files, who cares?
+
+[[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
+[[menus.main]]
+    name = 'About Us'
+    pageRef = '/about'
+    weight = 2
+
+[[menus.main]]
+    name = 'Philosophy'
+    pageRef = '/philosophy'
+    weight = 3
+
+# Games
+[[menus.games]]
+    name = 'Motionmelody'
+    pageRef = '/games/motionmelody'
+    weight = 60
+
+# Tools
+[[menus.tools]]
+    name = 'Trinket'
+    pageRef = '/tools/trinket'
+    weight = 110
