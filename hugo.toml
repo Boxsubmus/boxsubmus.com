@@ -22,6 +22,11 @@ canonifyURLs = true
     pageRef = '/philosophy'
     weight = 3
 
+[[menus.main]]
+    name = 'Support'
+    pageRef = '/support'
+    weight = 4
+
 # Games
 [[menus.games]]
     name = 'Motionmelody'
