@@ -132,12 +132,12 @@ main {
     flex-grow: 1;
     overflow-y: auto;
 
-    $shadow_opacity: 0.35;
-    $shadow_blur: 24px;
+    // $shadow_opacity: 0.35;
+    // $shadow_blur: 24px;
 
-    -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    // -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    // -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    // box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
   }
 }
 
