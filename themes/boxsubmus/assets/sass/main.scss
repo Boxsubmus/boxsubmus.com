@@ -3,6 +3,7 @@
 $color-background: #222;
 $color-separator: #3f3f3f;
 $color-primary: #bea693;
+$color-text: #f8f8f8;
 
 $content-padding: 24px;
 
@@ -12,7 +13,7 @@ html, body {
 
 body {
   background-color: $color-background;
-  color: white;
+  color: $color-text;
   margin: 0px;
 
   /*
@@ -120,6 +121,16 @@ hr {
 
 // Main Content
 
+
+@keyframes scrollingbg {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: -49px 0px;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -131,6 +142,16 @@ main {
     padding: $content-padding;
     flex-grow: 1;
     overflow-y: auto;
+
+    background-image: url("/article-bg.png");
+    background-color: (1, 1, 1, 0.2);
+    background-position: top;
+    background-repeat: repeat-x;
+
+    animation-name: scrollingbg;
+    animation-timing-function: linear;
+    // animation-duration: 5s;
+    animation-iteration-count: infinite;
 
     // $shadow_opacity: 0.35;
     // $shadow_blur: 24px;
