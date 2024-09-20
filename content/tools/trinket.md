@@ -27,4 +27,28 @@ Using the [Beef Programming Language](https://www.beeflang.org/) and IDE, you ca
   * No installer or forced updates
   * Near-instant hot-loading for almost every type of asset
 
+## Examples:
+
+**C++ Scripting:**
+```cpp
+#include "Trinket/Scripting/Object.hpp"
+#include "Trinket/Dev/Log.hpp"
+
+using namespace Trinket;
+
+namespace GameLogic
+{
+    class PlayerObject : public Object
+    {
+    public:
+        void CreateEvent() override
+        {
+            Debug::Log("Hello!");
+        }
+    };
+
+    TRINKET_REGISTER_OBJECT(PlayerObject);
+}
+```
+
 #### Trinket is currently a work-in-progress, please stay tuned for updates!
