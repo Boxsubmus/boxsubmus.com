@@ -32,6 +32,10 @@ Artist & Animator
 
 [https://x.com/boxsubmus](https://x.com/boxsubmus)
 
+**Bluesky**
+
+[https://bsky.app/profile/boxsubmus.com](https://bsky.app/profile/boxsubmus.com)
+
 **Web (you're here)**
 
 [https://boxsubmus.com](https://boxsubmus.com)
