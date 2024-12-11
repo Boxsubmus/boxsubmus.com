@@ -1,22 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Sen:wght@400;700&display=swap");
 
-$color-background: #222;
+$color-background: #2e2f31;
 $color-separator: #3f3f3f;
 $color-primary: #bea693;
 $color-text: #f8f8f8;
 
 $content-padding: 24px;
 
-html, body {
-  font-family: sans-serif;
-}
-
-body {
-  background-color: $color-background;
-  color: $color-text;
-  margin: 0px;
-
-  /*
+@mixin overlay-effect {
   &:after {
     background-image: url(/images/overlay_texture.png);
     content: " ";
@@ -29,7 +20,16 @@ body {
     pointer-events: none;
     opacity: 0.6;
   }
-  */
+}
+
+html, body {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+  margin: 0px;
 }
 
 header {
@@ -49,6 +49,8 @@ footer {
 
 .meta {
   border-bottom: 1px solid $color-separator;
+  background-image: url("/article-bg.png");
+
 }
 
 .meta-content {
@@ -143,7 +145,6 @@ main {
     flex-grow: 1;
     overflow-y: auto;
 
-    // background-image: url("/article-bg.png");
     background-color: (1, 1, 1, 0.2);
     background-position: top;
     background-repeat: repeat-x;
@@ -153,12 +154,12 @@ main {
     // animation-duration: 5s;
     animation-iteration-count: infinite;
 
-    // $shadow_opacity: 0.35;
-    // $shadow_blur: 24px;
+    $shadow_opacity: 0.25;
+    $shadow_blur: 44px;
 
-    // -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    // -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    // box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+    box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
   }
 }
 
@@ -172,4 +173,6 @@ main {
 
 .main-content-width {
   max-width: 768px;
+
+  @include overlay-effect();
 }
