@@ -4,4 +4,4 @@ title = 'Home'
 
 Hi, welcome to the official Boxsubmus website!
 
-![hello](/images/home/hello.png)
+<img src="/images/home/hello.png" class="allyway">

@@ -2,7 +2,7 @@
 title = 'Donations'
 +++
 
-![pls donate](/images/home/donate.png)
+<img src="/images/home/donate.png" class="allyway">
 
 We are very broke and do not have infinity billion dollars. If you like what we do, consider giving us your money like the hobos we are.
 

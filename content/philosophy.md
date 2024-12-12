@@ -15,4 +15,4 @@ All of our games' source code are released under the [GPL](https://www.gnu.org/l
 
 ---
 
-![hello](/images/philosophy/1.png)
+<img src="/images/philosophy/1.png" class="allyway">
