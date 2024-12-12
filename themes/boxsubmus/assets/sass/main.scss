@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Sen:wght@400;700&display=swap");
 
-$color-background: #2e2f31;
+$color-background: #1c1c1f;
+$color-content-background: #2e2f31;
+$color-title-background: #232327;
 $color-separator: #3f3f3f;
 $color-primary: #bea693;
-$color-text: #f8f8f8;
+$color-text: #d0d1d4;
 
 $content-padding: 24px;
+$separator-width: 0px;
 
 @mixin overlay-effect {
   &:after {
@@ -34,11 +37,11 @@ body {
 
 header {
   padding: 16px;
-  border-bottom: 1px solid $color-separator;
+  border-bottom: $separator-width solid $color-separator;
 }
 
 footer {
-  border-top: 1px solid $color-separator;
+  border-top: $separator-width solid $color-separator;
 
   clear: both;
   padding-left: $content-padding;
@@ -48,9 +51,9 @@ footer {
 }
 
 .meta {
-  border-bottom: 1px solid $color-separator;
+  border-bottom: $separator-width solid $color-separator;
   background-image: url("/article-bg.png");
-
+  background-color: $color-title-background;
 }
 
 .meta-content {
@@ -72,8 +75,11 @@ img {
 
 hr {
   box-sizing: content-box;
+  border-width: 0;
   height: 0;
   color: $color-separator;
+  background-color: $color-separator;
+  height: 1px;
 }
 
 .container {
@@ -114,7 +120,7 @@ hr {
 }
 
 .navbar-logo {
-  border-bottom: 1px solid $color-separator;
+  border-bottom: $separator-width solid $color-separator;
 }
 
 .margin-16px {
@@ -122,7 +128,6 @@ hr {
 }
 
 // Main Content
-
 
 @keyframes scrollingbg {
   from {
@@ -141,20 +146,13 @@ main {
   overflow-y: hidden;
 
   .content {
+    background-color: $color-content-background;
+
     padding: $content-padding;
     flex-grow: 1;
     overflow-y: auto;
 
-    background-color: (1, 1, 1, 0.2);
-    background-position: top;
-    background-repeat: repeat-x;
-
-    animation-name: scrollingbg;
-    animation-timing-function: linear;
-    // animation-duration: 5s;
-    animation-iteration-count: infinite;
-
-    $shadow_opacity: 0.25;
+    $shadow_opacity: 0.0;
     $shadow_blur: 44px;
 
     -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
@@ -168,11 +166,9 @@ main {
   flex-direction: column;
   flex-grow: 1;
 
-  border-left: 1px solid $color-separator;
+  border-left: $separator-width solid $color-separator;
 }
 
 .main-content-width {
   max-width: 768px;
-
-  @include overlay-effect();
 }

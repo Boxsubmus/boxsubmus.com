@@ -23,8 +23,8 @@ canonifyURLs = true
     weight = 3
 
 [[menus.main]]
-    name = 'Support'
-    pageRef = '/support'
+    name = 'Donate'
+    pageRef = '/donate'
     weight = 4
 
 # Games

@@ -1,5 +1,5 @@
 +++
-title = 'Support'
+title = 'Donations'
 +++
 
 ![pls donate](/images/home/donate.png)
