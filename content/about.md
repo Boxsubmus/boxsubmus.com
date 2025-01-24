@@ -8,7 +8,7 @@ we try to deliver value to the people through quality software and video games.
 <hr>
 
 ## Team
-**Braedon "Starpelly" Lewis**
+**Starpelly**
 
 Programmer & Designer
 
