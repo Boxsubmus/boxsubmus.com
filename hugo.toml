@@ -32,6 +32,10 @@ canonifyURLs = true
     name = 'Motionmelody'
     pageRef = '/games/motionmelody'
     weight = 60
+[[menus.games]]
+    name = 'Minesweeper+'
+    pageRef = '/games/minesweeper+'
+    weight = 70
 
 # Tools
 [[menus.tools]]
