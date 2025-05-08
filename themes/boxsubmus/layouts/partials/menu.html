@@ -7,45 +7,53 @@ Renders a menu for the given menu ID.
 @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
 
-{{- $page := .page }}
-{{- $menuID := .menuID }}
-
-{{- with index site.Menus $menuID }}
-  <!--<nav>-->
-    <!--<ul>-->
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    <!--</ul>-->
-  <!--</nav>-->
-{{- end }}
-
-{{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
-  {{- range .menuEntries }}
+  {{- $menuID := .menuID }}
+
+  {{- with index site.Menus $menuID }}
+    <!--<nav>-->
+      <!--<ul>-->
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      <!--</ul>-->
+    <!--</nav>-->
+  {{- end }}
+
+  {{- define "partials/inline/menu/walk.html" }}
+    {{- $page := .page }}
+    {{- range .menuEntries }}
+
+
+
+    {{- $url := replace .URL "/$" "" }}
+    {{- $current := replace $page.RelPermalink "/$" "" }}
     {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
+    {{- if eq $url $current }}
       {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
+
+
     {{- $name := .Name }}
     {{- with .Identifier }}
       {{- with T . }}
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <li>
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+    <div class="sidebar-link">
+      <div class="main">
+        <a
+          {{- range $k, $v := $attrs }}
+            {{- with $v }}
+              {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+            {{- end }}
           {{- end }}
-        {{- end -}}
-      >{{ $name }}</a>
-      {{- with .Children }}
-        <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
-      {{- end }}
-    </li>
+        >{{ $name }}</a>
+        {{- with .Children }}
+          <ul>
+            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+          </ul>
+        {{- end }}
+      </div>
+    </div>
   {{- end }}
+  
 {{- end }}

@@ -9,8 +9,8 @@
       <div class="navbar-logo">
         <div class="margin-16px">
           <a href="/">
-            <img src="/images/logo.webp" style="width: 200px; margin: auto;"><br>
-            <img src="/images/wordmark.webp" style="width: 200px; margin: auto; color: #9b8778; border-radius: 0px;">
+            <img src="/images/logo.webp" style="width: 70px; margin: auto;"><br>
+            <!--<img src="/images/wordmark.webp" style="width: 200px; margin: auto; color: #9b8778; border-radius: 0px;">-->
           </a>
   
         </div>
@@ -19,9 +19,9 @@
       <div class="navbar">
         <div class="content">
           {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-          <h2>games</h2>
+          <h3>games</h3>
           {{ partial "menu.html" (dict "menuID" "games" "page" .) }}
-          <h2>tools</h2>
+          <h3>tools</h3>
           {{ partial "menu.html" (dict "menuID" "tools" "page" .) }}
         </div>
       </div>

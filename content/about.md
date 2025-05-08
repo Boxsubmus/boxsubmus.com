@@ -2,6 +2,8 @@
 title = 'About Us'
 +++
 
+<img src="/images/wordmark.webp" style="width: 600px; margin: auto; color: #9b8778; border-radius: 0px; display: block; margin: 0 auto">
+
 **Boxsubmus** is a small and independent video game studio formed on June 12th, 2021. Together, 
 we try to deliver value to the people through quality software and video games.
 
