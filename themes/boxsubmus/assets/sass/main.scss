@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&family=Material+Symbols+Rounded:FILL@0..1");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&family=Material+Symbols+Rounded:FILL@0..1");
 
 $color-background: #202022;
 $color-title-background: #242424;
@@ -16,6 +15,20 @@ $color-text: #d0d1d4;
 
 $content-padding: 24px;
 $separator-width: 0px;
+
+$mobile-max-width: 1000px;
+
+@mixin respond-to-narrow {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin respond-to-wide {
+  @media (min-width: ($mobile-max-width + 1px)) {
+    @content;
+  }
+}
 
 @mixin overlay-effect {
   &:after {
@@ -34,7 +47,9 @@ $separator-width: 0px;
 
 html, body {
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  @include respond-to-wide {
+    font-size: 13px;
+  }
   background-color: $color-background;
 }
 
@@ -105,8 +120,12 @@ a {
 }
 
 img {
-  max-width: 700px;
-  border-radius: 0.5vh;
+  max-width: 100%;
+  border-radius: 8px;
+
+  @include respond-to-wide {
+    max-width: 700px;
+  }
 }
 
 .allyway {
@@ -123,8 +142,10 @@ hr {
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+  @include respond-to-wide {
+    display: flex;
+    height: 100vh;
+  }
 }
 
 // Navbar
@@ -159,10 +180,16 @@ hr {
     list-style-type: none;
     line-height: 24px;
   }
+
+  @mixin respond-to-narrow {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
 }
 
 .navbar-logo {
   border-bottom: $separator-width solid $color-separator;
+  text-align: center;
 }
 
 .margin-16px {
@@ -201,7 +228,10 @@ main {
     -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
     box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
 
-    border-radius: 16px 0px 0px 16px;
+    border-radius: 16px;
+    @include respond-to-wide {
+      border-radius: 16px 0px 0px 16px;
+    }
   }
 }
 
@@ -215,8 +245,11 @@ main {
 
 .main-content-width {
   margin: 0 auto;
-  max-width: 768px !important;
-  padding: 2rem;
+
+  @include respond-to-wide {
+    padding: 2rem;
+    max-width: 768px !important;
+  }
 }
 
 .sidebar-link {
@@ -244,6 +277,23 @@ main {
       &:hover, &.active {
         background-color: rgba(178, 190, 212, 0.1);
         color: white;
+      }
+
+      .idk {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        overflow: hidden;
+
+        .material-icons-round {
+          font-size: 20px;
+          // width: 24px !important;
+        }
+        .text {
+          flex-grow: 1;
+        }
       }
     }
   }
