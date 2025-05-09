@@ -124,7 +124,7 @@ img {
   border-radius: 8px;
 
   @include respond-to-wide {
-    max-width: 700px;
+    // max-width: 700px;
   }
 }
 
@@ -266,7 +266,7 @@ main {
 
     a {
       margin: 0px;
-      border-radius: 5px;
+      border-radius: 6px;
       padding: 6px 12px;
       display: flex;
       flex-grow: 1;
@@ -302,3 +302,21 @@ main {
 i {
   font-family: "Material Symbols Rounded";
 }
+
+.emscripten-container {
+  max-width: 1280px;
+  pointer-events: none;
+}
+.emscripten {
+  width: 100%;
+}
+div.emscripten {
+  text-align: center;
+  // width: 1280px;
+  // height: 720px;
+}
+div.emscripten_border {
+  border: 1px solid black;
+}
+/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+canvas.emscripten { border: 0px none; background-color: black; border-radius: 0; }
