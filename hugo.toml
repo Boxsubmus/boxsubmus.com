@@ -46,7 +46,3 @@ canonifyURLs = true
     weight = 70
 
 # Tools
-[[menus.tools]]
-    name = 'Trinket'
-    pageRef = '/tools/trinket'
-    weight = 110
