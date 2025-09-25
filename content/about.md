@@ -14,13 +14,9 @@ we try to deliver value to the people through quality software and video games.
 
 Programmer & Designer
 
-[starpelly@boxsubmus.com](mailto:starpelly@boxsubmus.com)
-
 **Allyway**
 
 Artist & Animator
-
-[allyway@boxsubmus.com](mailto:allyway@boxsubmus.com)
 
 <hr>
 
@@ -28,7 +24,7 @@ Artist & Animator
 
 **Email**
 
-[contact@boxsubmus.com](mailto:contact@boxsubmus.com)
+[boxsubmus@gmail.com](mailto:boxsubmus@gmail.com)
 
 **YouTube**
 

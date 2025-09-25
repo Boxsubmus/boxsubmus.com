@@ -44,5 +44,9 @@ canonifyURLs = true
     name = 'Minesweeper+'
     pageRef = '/games/minesweeper+'
     weight = 70
+[[menus.games]]
+    name = 'Hyperline'
+    pageRef = '/games/hyperline'
+    weight = 70
 
 # Tools
