@@ -10,7 +10,8 @@ we try to deliver value to the people through quality software and video games.
 <hr>
 
 ## Team
-**Starpelly**
+**Starpelly** 
+[pelly@boxsubmus.com](mailto:pelly@boxsubmus.com)
 
 Programmer & Designer
 
@@ -24,7 +25,7 @@ Artist & Animator
 
 **Email**
 
-[boxsubmus@gmail.com](mailto:boxsubmus@gmail.com)
+[boxsubmus@gmail.com](mailto:support@boxsubmus.com)
 
 **YouTube**
 
