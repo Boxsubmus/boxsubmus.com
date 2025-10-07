@@ -25,7 +25,7 @@ Artist & Animator
 
 **Email**
 
-[boxsubmus@gmail.com](mailto:support@boxsubmus.com)
+[support@boxsubmus.com](mailto:support@boxsubmus.com)
 
 **YouTube**
 
