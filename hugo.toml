@@ -35,6 +35,14 @@ canonifyURLs = true
     [menus.main.params]
       icon = 'favorite'
 
+[[menus.main]]
+    name = 'Privacy Policy'
+    pageRef = '/privacy'
+    weight = 4
+    [menus.main.params]
+      icon = 'security'
+
+
 # Games
 [[menus.games]]
     name = 'Minesweeper+'
