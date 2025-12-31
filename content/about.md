@@ -11,9 +11,10 @@ we try to deliver value to the people through quality software and video games.
 
 ## Team
 **Starpelly** 
-[pelly@boxsubmus.com](mailto:pelly@boxsubmus.com)
 
-Programmer & Designer
+Company Representative, Programmer & Designer
+
+[pelly@boxsubmus.com](mailto:pelly@boxsubmus.com)
 
 **Allyway**
 
@@ -26,6 +27,8 @@ Artist & Animator
 **Email**
 
 [support@boxsubmus.com](mailto:support@boxsubmus.com)
+
+Our response rate might be vary and it is based on inquiries.
 
 **YouTube**
 
