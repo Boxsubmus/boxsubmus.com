@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&family=Material+Symbols+Rounded:FILL@0..1");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 $color-background: #1c1c1f;
 $color-title-background: #242424;
@@ -19,306 +20,326 @@ $separator-width: 0px;
 $mobile-max-width: 1000px;
 
 @mixin respond-to-narrow {
-  @media (max-width: $mobile-max-width) {
-    @content;
-  }
+	@media (max-width: $mobile-max-width) {
+		@content;
+	}
 }
 
 @mixin respond-to-wide {
-  @media (min-width: ($mobile-max-width + 1px)) {
-    @content;
-  }
+	@media (min-width: ($mobile-max-width + 1px)) {
+		@content;
+	}
 }
 
 @mixin overlay-effect {
-  &:after {
-    background-image: url(/images/overlay_texture.png);
-    content: " ";
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 500;
-    pointer-events: none;
-    opacity: 0.6;
-  }
+	&:after {
+		background-image: url(/images/overlay_texture.png);
+		content: " ";
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 500;
+		pointer-events: none;
+		opacity: 0.6;
+	}
 }
 
 html, body {
-  font-family: "Poppins", sans-serif;
-  @include respond-to-wide {
-    font-size: 13px;
-  }
-  background-color: $color-background;
+	font-family: "Poppins", sans-serif;
+	// font-family: 'Space Grotesk', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+
+	@include respond-to-wide {
+		font-size: 14px;
+	}
+	background-color: $color-background;
 }
 
 body {
-  color: $color-text;
-  margin: 0px;
+	color: $color-text;
+	margin: 0px;
 }
 
 header {
-  padding: 16px;
-  border-bottom: $separator-width solid $color-separator;
+	padding: 16px;
+	border-bottom: $separator-width solid $color-separator;
 }
 
 footer {
-  border-top: $separator-width solid $color-separator;
+	border-top: $separator-width solid $color-separator;
 
-  clear: both;
-  padding-left: $content-padding;
+	clear: both;
+	padding-left: $content-padding;
 
-  flex-grow: 0;
-  flex-shrink: 0;
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .meta {
-  position: relative;
+	position: relative;
 
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	background-color: $color-content-background;
 
-    z-index: 0;
-    pointer-events: none;
+	$shadow_opacity: 0.3;
+	$shadow_blur: 24px;
+	
+	-webkit-box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+	-moz-box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+	box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
 
-    /*
-    border-bottom: $separator-width solid $color-separator;
-    background-color: $color-title-background;
-    */
-    background-image: url("/article-bg.png");
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 
-    mask-image: linear-gradient(to left, black 90%, transparent 100%);
-    // -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
-  }
+		z-index: 0;
+		pointer-events: none;
 
-  .meta-content {
-    padding-left: $content-padding;
-  
-    h1 {
-      font-weight: 600;
-    }
-  }
+		/*
+		border-bottom: $separator-width solid $color-separator;
+		background-color: $color-title-background;
+		*/
+		// background-image: url("/article-bg.png");
 
-  .parent > *:not(.background-child) {
-    position: relative;
-    z-index: 1;
-  }
+		mask-image: linear-gradient(to left, black 90%, transparent 100%);
+		// -webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
+	}
+
+	.meta-content {
+		padding-left: $content-padding;
+		h1 {
+			font-weight: 600;
+		}
+	}
+
+	.parent > *:not(.background-child) {
+		position: relative;
+		z-index: 1;
+	}
 }
 
 h1, h2 {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 a {
-  color: $color-primary;
-  text-decoration: none;
+	color: $color-primary;
+	text-decoration: none;
 }
 
 img {
-  max-width: 100%;
-  border-radius: 8px;
+	max-width: 100%;
+	border-radius: 8px;
 
-  @include respond-to-wide {
-    // max-width: 700px;
-  }
+	
+	@include respond-to-wide {
+		// max-width: 700px;
+	}
 }
 
 .allyway {
-  filter: invert(0.8);
+	filter: invert(0.8);
 }
 
 hr {
-  box-sizing: content-box;
-  border-width: 0;
-  height: 0;
-  color: $color-separator;
-  background-color: $color-separator;
-  height: 1px;
+	box-sizing: content-box;
+	border-width: 0;
+	height: 0;
+	color: $color-separator;
+	background-color: $color-separator;
+	height: 1px;
 }
 
 .container {
-  @include respond-to-wide {
-    display: flex;
-    height: 100vh;
-  }
+	@include respond-to-wide {
+		display: flex;
+		height: 100vh;
+	}
 }
 
 // Navbar
 
 .navbar-area {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 
-  flex-grow: inherit;
+	flex-grow: inherit;
+
+	// background-color: $color-primary;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  flex-grow: 1;
-  overflow-y: hidden;
+	flex-grow: 1;
+	overflow-y: hidden;
 
-  min-width: 200px;
+	min-width: 200px;
 
-  .content {
-    padding: 16px;
-    flex-grow: 1;
-    overflow-y: auto;
-  }
-  
-  h2 {
-    font-weight: 600;
-  }
-  li {
-    list-style-type: none;
-    line-height: 24px;
-  }
+	.content {
+		padding: 16px;
+		flex-grow: 1;
+		overflow-y: auto;
+	}
+	
+	h2 {
+		font-weight: 600;
+	}
+	li {
+		list-style-type: none;
+		line-height: 24px;
+	}
 
-  @mixin respond-to-narrow {
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
+	@mixin respond-to-narrow {
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
 }
 
 .navbar-logo {
-  border-bottom: $separator-width solid $color-separator;
-  text-align: center;
+	border-bottom: $separator-width solid $color-separator;
+	text-align: center;
 }
 
 .margin-16px {
-  margin: 16px;
+	margin: 16px;
 }
 
 // Main Content
 
 @keyframes scrollingbg {
-  from {
-    background-position: 0% 0%;
-  }
-  to {
-    background-position: -49px 0px;
-  }
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: -49px 0px;
+	}
 }
 
 main {
-  display: flex;
-  flex-direction: column;
+  	display: flex;
+  	flex-direction: column;
 
-  flex-grow: 1;
-  overflow-y: hidden;
+  	flex-grow: 1;
+  	overflow-y: hidden;
+    margin: 16px 16px 0px 16px;
+    border-radius: 8px;
 
-  .content {
-    background-color: $color-content-background;
+	/*
+	$shadow_opacity: 0.2;
+	$shadow_blur: 44px;
+	
+	-webkit-box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+	-moz-box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+	box-shadow: 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
+*/
+	border-style: solid;
+	border-width: 1px;
+	border-color: $color-separator;
 
-    padding: $content-padding;
-    flex-grow: 1;
-    overflow-y: auto;
+	.content {
+		background-color: $color-content-background;
 
-    $shadow_opacity: 0.0;
-    $shadow_blur: 44px;
+		padding: $content-padding;
+		flex-grow: 1;
+		overflow-y: auto;
 
-    -webkit-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    -moz-box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-    box-shadow: inset 0px 0px $shadow_blur 0px rgba(0, 0, 0, $shadow_opacity);
-
-    border-radius: 16px;
-    margin: 0px 16px 0px 16px;
-    @include respond-to-wide {
-      margin: 0px 16px 0px 0px;
-      // border-radius: 16px 0px 0px 16px;
-    }
-  }
+		// border-radius: 16px;
+		@include respond-to-wide {
+			// border-radius: 16px 0px 0px 16px;
+		}
+	}
 }
 
 .main-area {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 
-  border-left: $separator-width solid $color-separator;
+	border-left: $separator-width solid $color-separator;
 }
 
 .main-content-width {
-  margin: 0 auto;
+	margin: 0 auto;
 
-  @include respond-to-wide {
-    padding: 2rem;
-    max-width: 768px !important;
-  }
+	@include respond-to-wide {
+		padding: 2rem;
+		max-width: 768px !important;
+	}
 }
 
 .sidebar-link {
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	user-select: none;
+	position: relative;
 
-  .main {
-    display: flex;
-    margin: 1px 0px;
-    max-width: 100%;
-    overflow: hidden;
+	.main {
+		display: flex;
+		margin: 1px 0px;
+		max-width: 100%;
+		overflow: hidden;
 
-    a {
-      margin: 0px;
-      border-radius: 6px;
-      padding: 6px 12px;
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-      overflow: hidden;
-      cursor: pointer;
+		a {
+		margin: 0px;
+		border-radius: 6px;
+		padding: 6px 12px;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		overflow: hidden;
+		cursor: pointer;
 
-      &:hover, &.active {
-        background-color: rgba(178, 190, 212, 0.1);
-        color: white;
-      }
+		&:hover, &.active {
+			background-color: rgba(178, 190, 212, 0.1);
+			color: white;
+		}
 
-      .idk {
-        display: flex;
-        flex-grow: 1;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        overflow: hidden;
+		.idk {
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+			gap: 8px;
+			width: 100%;
+			overflow: hidden;
 
-        .material-icons-round {
-          font-size: 20px;
-          // width: 24px !important;
-        }
-        .text {
-          flex-grow: 1;
-        }
-      }
-    }
-  }
+			.material-icons-round {
+			font-size: 20px;
+			// width: 24px !important;
+			}
+			.text {
+			flex-grow: 1;
+			}
+		}
+		}
+	}
 }
 
 i {
-  font-family: "Material Symbols Rounded";
+  	font-family: "Material Symbols Rounded";
 }
 
 .emscripten-container {
-  max-width: 1280px;
-  pointer-events: none;
+  	max-width: 1280px;
+  	pointer-events: none;
 }
 .emscripten {
-  width: 100%;
+  	width: 100%;
 }
 div.emscripten {
-  text-align: center;
-  // width: 1280px;
-  // height: 720px;
+	text-align: center;
+	// width: 1280px;
+	// height: 720px;
 }
 div.emscripten_border {
-  border: 1px solid black;
+	border: 1px solid black;
 }
 /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
 canvas.emscripten { border: 0px none; background-color: black; border-radius: 0; }
